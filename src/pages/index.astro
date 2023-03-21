@@ -6,6 +6,8 @@ import LineUpSmall from "../components/Line_up_small.astro";
 import LineUpMedium from "../components/Line_up_medium.astro";
 import Program from "../components/Program.astro";
 import ArtistCard from "../components/ArtistCard.astro";
+
+//fetch her,m en gang build time
 ---
 
 <Layout title="Kune Home">
@@ -26,11 +28,17 @@ import ArtistCard from "../components/ArtistCard.astro";
         <a href="line-up">
           <img class="full_lineup" src="img/full_lineup.svg" alt="" /></a
         >
-        <a href="#" class="first_card card_large"><ArtistCard size="large" /></a
-        >
-        <a href="#" class="second_card card_large"
-          ><ArtistCard size="large" /></a
-        >
+
+        {
+          data.map((act) => {
+            return (
+              <a href="#" class="card-wrapper">
+                <ArtistCard name={act.name} size={act.size} />
+              </a>
+            );
+          })
+        }
+
         <a href="#" class="third_card card_small"><ArtistCard size="small" /></a
         >
         <a href="#" class="fourth_card card_medium"
@@ -165,13 +173,13 @@ import ArtistCard from "../components/ArtistCard.astro";
     grid-row: 1/7;
     border-radius: 15px;
   }
-  .first_card {
+  .card-wrapper:nth-child(3) {
     grid-column: 1;
     margin-left: 28%;
     margin-top: 16%;
   }
 
-  .second_card {
+  .card-wrapper:nth-child(4) {
     grid-column: 3;
     margin-left: 13%;
   }

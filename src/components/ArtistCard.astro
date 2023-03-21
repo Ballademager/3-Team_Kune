@@ -1,9 +1,10 @@
 ---
-const { size } = Astro.props;
+const { size, name } = Astro.props;
 ---
 
 <div class="card" data-size={size}>
   <p class="name">Liam Gallagher</p>
+  <!-- <p class="name">{name}</p> -->
   <p class="genre">Rock</p>
 </div>
 
