@@ -57,4 +57,21 @@
     opacity: 0;
     /* background: blue; */
   }
+  @media (max-width: 450px) {
+    .burger {
+      width: 2.5rem;
+    }
+    .burger .bar,
+    .burger::before,
+    .burger::after {
+      height: 3px;
+      margin: 0 0 7px 0px;
+    }
+    .burger.is-active::before {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    .burger.is-active::after {
+      transform: rotate(-45deg) translate(6px, -8px);
+    }
+
 </style>
