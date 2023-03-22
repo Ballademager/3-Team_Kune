@@ -1,13 +1,11 @@
 ---
 const { size, size2, name, genre, image, id } = Astro.props;
-console.log({ image });
 ---
 
 <div class="card" data-size={size}>
   <p class="name">{name}</p>
   <p class="genre">{genre}</p>
-  <!-- <img src=`${image}` alt="" /> -->
-  <img class="bg_img" src={image} alt="" />
+  <img src={image} alt="" />
 </div>
 <!-- <script>
   {
@@ -17,7 +15,7 @@ console.log({ image });
 <style>
   .card {
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
     /* background-image: url({image}); */
     /* background-image: url(/img/COLOURBOX3764379.jpg); */
     /* background-size: cover; */
@@ -75,7 +73,6 @@ console.log({ image });
     height: 100%;
     background-color: rgba(107, 107, 107, 0.5);
     border-radius: 50%;
-    /* z-index: 2; */
   }
   .card:hover p {
     opacity: 1;

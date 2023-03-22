@@ -16,16 +16,8 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3ZXhudWxkbXJ5YnVocmlweXhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzEzODUsImV4cCI6MTk5NDMwNzM4NX0.oiwJey3e46ewy1-kC2D-dKF-l7ESxOX8UV7n1hLOizs",
   },
 }).then((res) => res.json());
-
-// console.log(data);
 ---
 
-<!--
-  skyer baggrund
-  data.map
-  program-knap
-  'countdown' p
- -->
 <Layout title="Line-up">
   <main>
     <div id="cloud_layer">
@@ -71,14 +63,6 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
               );
             })
           }
-          <!-- <a href="#"><ArtistCard size="medium" /></a>
-          <a href="#"><ArtistCard size="small" /></a>
-          <a href="#"><ArtistCard size="large" /></a>
-          <a href="#"><ArtistCard size="medium" /></a>
-          <a href="#"><ArtistCard size="small" /></a>
-          <a href="#"><ArtistCard size="large" /></a>
-          <a href="#"><ArtistCard size="medium" /></a>
-          <a href="#"><ArtistCard size="small" /></a> -->
         </div>
       </div>
       <Program />
@@ -101,7 +85,6 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    /* margin-top: 9rem; */
   }
   #cloud_layer,
   #top_layer {
@@ -184,14 +167,12 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     justify-items: center;
     margin-inline: 5rem;
     margin-bottom: 6rem;
-    /* position: relative; */
   }
   .leftside {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 21rem 11rem 6rem 21rem 10rem 7rem 21rem;
     position: relative;
-    /* padding-inline: 10rem; */
     width: 80%;
   }
   .rightside {
@@ -294,13 +275,9 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     }
     .rightside :nth-child(2n + 2) {
       justify-self: right;
-      /* top: -3rem; */
-      /* margin-top: -2rem; */
     }
     .rightside :nth-child(2n + 1) {
       justify-self: left;
-      /* margin-top: -4rem; */
-      /* top: -2rem; */
     }
     h2 {
       padding-top: 7rem;

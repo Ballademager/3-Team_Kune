@@ -105,7 +105,9 @@ const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     display: block;
     padding: 0.5rem;
   }
-
+  .middle {
+    margin-right: 4rem;
+  }
   @keyframes bouncing-text {
     0% {
       transform: translateX(20%);
@@ -217,7 +219,7 @@ const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
   .card_wrapper:nth-child(11) {
     grid-column: 3;
     margin-top: 0%;
-    margin-left: 12%;
+    margin-left: 8%;
   }
 
   .features {
@@ -257,18 +259,24 @@ const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
       font-size: 625%;
     }
 
-    .first_card {
+    .card_wrapper:nth-child(3) {
       margin-left: 15%;
     }
-    .fourth_card {
-      margin-top: 2%;
-      margin-left: 44%;
+    .card_wrapper:nth-child(5) {
+      margin-left: 85%;
     }
-
+    .card_wrapper:nth-child(6) {
+      margin-top: 2%;
+      margin-left: 34%;
+    }
+    .card_wrapper:nth-child(10) {
+      grid-column: 1;
+      margin-top: -18%;
+      margin-left: 40%;
+    }
     .fourth {
       background-size: contain;
     }
-
     .full_lineup {
       left: 6%;
       top: 3%;
@@ -287,33 +295,22 @@ const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     .fourth h1 {
       font-size: 580%;
     }
-
-    .card_large {
-      width: 15rem;
-    }
-    .card_medium {
-      width: 10rem;
-    }
-    .card_small {
-      width: 5rem;
-    }
-
-    .first_card {
+    .card_wrapper:nth-child(3) {
       margin-left: 15%;
       margin-top: 10%;
     }
 
-    .second_card {
+    .card_wrapper:nth-child(4) {
       margin-top: -2%;
       margin-left: 13%;
     }
 
-    .third_card {
+    ..card_wrapper:nth-child(5) {
       margin-top: -14%;
       margin-left: 68%;
     }
 
-    .fourth_card {
+    ..card_wrapper:nth-child(6) {
       margin-top: 2%;
       margin-left: 40%;
     }
@@ -324,21 +321,21 @@ const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
       margin-left: 7%;
     } */
 
-    .sixth_card {
+    .card_wrapper:nth-child(8) {
       margin-top: -18%;
       margin-left: 22%;
     }
 
-    .seventh_card {
+    .card_wrapper:nth-child(9) {
       margin-top: 0%;
       margin-left: 60%;
     }
-    .eighth_card {
+    ..card_wrapper:nth-child(10) {
       margin-top: -15%;
       margin-left: 43%;
     }
 
-    .ninth_card {
+    .card_wrapper:nth-child(11) {
       grid-column: 3;
       margin-top: 0%;
       margin-left: 12%;
@@ -365,40 +362,40 @@ const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     .fourth {
       background-size: cover;
     }
-    .first_card {
-      margin-left: 26%;
-    }
-
-    .second_card {
-      margin-left: 20%;
-    }
-
-    .third_card {
-      margin-left: 64%;
-    }
-
-    .fourth_card {
-      margin-left: 54%;
-    }
-
-    .fifth_card {
+    .card_wrapper:nth-child(3) {
       margin-left: 12%;
     }
 
-    .sixth_card {
-      margin-left: 40%;
+    .card_wrapper:nth-child(4) {
+      margin-left: 20%;
     }
 
-    .seventh_card {
+    .card_wrapper:nth-child(5) {
+      margin-left: 84%;
+    }
+
+    .card_wrapper:nth-child(6) {
+      margin-left: 41%;
+    }
+
+    .card_wrapper:nth-child(7) {
+      margin-left: 12%;
+    }
+
+    .card_wrapper:nth-child(8) {
+      margin-left: 20%;
+    }
+
+    .card_wrapper:nth-child(9) {
       margin-top: 0%;
-      margin-left: 50%;
+      margin-left: 60%;
     }
-    .eighth_card {
+    .card_wrapper:nth-child(10) {
       margin-top: -15%;
-      margin-left: 58%;
+      margin-left: 38%;
     }
 
-    .ninth_card {
+    .card_wrapper:nth-child(11) {
       grid-column: 3;
       margin-top: 0%;
       margin-left: 12%;
@@ -483,19 +480,19 @@ const data3 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     .streg {
       display: none;
     }
-    .fifth_card,
-    .first_card,
-    .second_card {
+    .card_wrapper:nth-child(7),
+    .card_wrapper:nth-child(3),
+    .card_wrapper:nth-child(4) {
       margin: 0;
       grid-column: 1;
       place-self: center;
     }
-    .third_card,
-    .fourth_card,
-    .sixth_card,
-    .seventh_card,
-    .eighth_card,
-    .ninth_card {
+    .card_wrapper:nth-child(5),
+    .card_wrapper:nth-child(6),
+    .card_wrapper:nth-child(8),
+    .card_wrapper:nth-child(9),
+    .card_wrapper:nth-child(10),
+    .card_wrapper:nth-child(11) {
       display: none;
     }
   }
