@@ -28,8 +28,21 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
  -->
 <Layout title="Line-up">
   <main>
-    <div class="cloud_layer"></div>
-    <div class="top_layer">
+    <div id="cloud_layer">
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_2.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_2.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_1.webp" alt="" />
+      <img src="/img/cloud_3.webp" alt="" />
+      <img src="/img/cloud_2.webp" alt="" />
+    </div>
+    <div id="top_layer">
       <h2>19/7-23/7</h2>
       <div class="solh1">
         <img src="/img/sol.webp" alt="" />
@@ -75,6 +88,11 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
   </main>
 </Layout>
 
+<script>
+  document.getElementById("cloud_layer").style.maxHeight = document.getElementById("top_layer").style.height;
+  console.log(document.getElementById("top_layer").style.height);
+</script>
+
 <style>
   body {
     background-color: var(--bg-peach);
@@ -85,11 +103,65 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     grid-template-rows: 1fr;
     /* margin-top: 9rem; */
   }
-  .cloud_layer,
-  .top_layer {
+  #cloud_layer,
+  #top_layer {
     grid-area: 1/1/2/2;
   }
-  .cloud_layer {
+  #cloud_layer {
+    position: relative;
+    z-index: -1;
+  }
+  #cloud_layer img {
+    position: absolute;
+  }
+
+  #cloud_layer :nth-child(1) {
+    left: 12%;
+    top: 6%;
+  }
+  #cloud_layer :nth-child(2) {
+    top: 8%;
+    left: 50%;
+  }
+  #cloud_layer :nth-child(3) {
+    top: 18%;
+    left: 15%;
+  }
+  #cloud_layer :nth-child(4) {
+    top: 28%;
+    left: 65%;
+  }
+  #cloud_layer :nth-child(5) {
+    top: 38%;
+    left: 32%;
+  }
+  #cloud_layer :nth-child(6) {
+    top: 54%;
+    left: -5%;
+  }
+  #cloud_layer :nth-child(7) {
+    top: 54%;
+    left: 35%;
+  }
+  #cloud_layer :nth-child(9) {
+    top: 68%;
+    right: 2%;
+  }
+  #cloud_layer :nth-child(8) {
+    top: 68%;
+    left: 8%;
+  }
+  #cloud_layer :nth-child(10) {
+    top: 78%;
+    left: 12%;
+  }
+  #cloud_layer :nth-child(11) {
+    top: 86%;
+    right: 8%;
+  }
+  #cloud_layer :nth-child(12) {
+    top: 96%;
+    left: 35%;
   }
   h2 {
     text-align: center;
@@ -175,6 +247,9 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     text-shadow: #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 2px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
   }
   @media (max-width: 1250px) {
+    #cloud_layer img {
+      scale: 0.8;
+    }
   }
   @media (max-width: 930px) {
     .leftside {
@@ -195,6 +270,9 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
     }
     .solh1 h1 {
       font-size: 7rem;
+    }
+    #cloud_layer img {
+      scale: 0.7;
     }
   }
   @media (max-width: 750px) {
@@ -238,6 +316,24 @@ const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/arti
       text-align: center;
       margin-top: 2rem;
       font-size: 3.5rem;
+    }
+    #cloud_layer img {
+      scale: 0.6;
+    }
+    #cloud_layer :nth-child(2) {
+      left: 20%;
+    }
+    #cloud_layer :nth-child(4) {
+      left: 35%;
+    }
+    #cloud_layer :nth-child(5) {
+      left: 18%;
+    }
+    #cloud_layer :nth-child(7) {
+      left: 20%;
+    }
+    #cloud_layer :nth-child(12) {
+      left: 18%;
     }
   }
   @media (max-width: 500px) {
