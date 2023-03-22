@@ -2,6 +2,21 @@
 import Layout from "../layout/Layout.astro";
 import Countdown from "../components/Countdown.astro";
 import ArtistCard from "../components/ArtistCard.astro";
+const data = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/artist?select=id,name,genre,image,size&limit=7", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3ZXhudWxkbXJ5YnVocmlweXhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzEzODUsImV4cCI6MTk5NDMwNzM4NX0.oiwJey3e46ewy1-kC2D-dKF-l7ESxOX8UV7n1hLOizs",
+  },
+}).then((res) => res.json());
+
+const data2 = await fetch("https://awexnuldmrybuhripyxr.supabase.co/rest/v1/artist?select=id,name,genre,image,size&limit=8&order=id.desc", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF3ZXhudWxkbXJ5YnVocmlweXhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3MzEzODUsImV4cCI6MTk5NDMwNzM4NX0.oiwJey3e46ewy1-kC2D-dKF-l7ESxOX8UV7n1hLOizs",
+  },
+}).then((res) => res.json());
+
+// console.log(data);
 ---
 
 <!--
@@ -20,23 +35,34 @@ import ArtistCard from "../components/ArtistCard.astro";
     <div class="artist_grid">
       <div class="line"></div>
       <div class="leftside">
-        <a href="#"><ArtistCard size="large" /></a>
-        <a href="#"><ArtistCard size="medium" /></a>
-        <a href="#"><ArtistCard size="small" /></a>
-        <a href="#"><ArtistCard size="large" /></a>
-        <a href="#"><ArtistCard size="medium" /></a>
-        <a href="#"><ArtistCard size="small" /></a>
-        <a href="#"><ArtistCard size="large" /></a>
+        {
+          data.map((act) => {
+            return (
+              <a href="#">
+                <ArtistCard name={act.name} genre={act.genre} size={act.size} />
+              </a>
+            );
+          })
+        }
       </div>
       <div class="rightside">
-        <a href="#"><ArtistCard size="medium" /></a>
+        {
+          data2.map((act) => {
+            return (
+              <a href="#">
+                <ArtistCard image={act.image} name={act.name} genre={act.genre} size={act.size} />
+              </a>
+            );
+          })
+        }
+        <!-- <a href="#"><ArtistCard size="medium" /></a>
         <a href="#"><ArtistCard size="small" /></a>
         <a href="#"><ArtistCard size="large" /></a>
         <a href="#"><ArtistCard size="medium" /></a>
         <a href="#"><ArtistCard size="small" /></a>
         <a href="#"><ArtistCard size="large" /></a>
         <a href="#"><ArtistCard size="medium" /></a>
-        <a href="#"><ArtistCard size="small" /></a>
+        <a href="#"><ArtistCard size="small" /></a> -->
       </div>
     </div>
     <Countdown />

@@ -1,17 +1,25 @@
 ---
-const { size } = Astro.props;
+const { size, name, genre, image, id } = Astro.props;
+console.log({ image });
 ---
 
 <div class="card" data-size={size}>
-  <p class="name">Liam Gallagher</p>
-  <p class="genre">Rock</p>
+  <p class="name">{name}</p>
+  <p class="genre">{genre}</p>
+  <!-- <img src=`${image}` alt="" /> -->
+  <img src={image} alt="" />
 </div>
-
+<!-- <script>
+  {
+    document.querySelector(".card").style.cssText += `background-image: url(${image})`;
+  }
+</script> -->
 <style>
   .card {
     position: relative;
     background-color: #fff;
-    background-image: url(/img/COLOURBOX3764379.jpg);
+    /* background-image: url(/img/COLOURBOX3764379.jpg); */
+    background-image: url({image});
     background-size: cover;
     background-position: center;
     overflow: hidden;
