@@ -1,19 +1,27 @@
 ---
-const { size } = Astro.props;
+const { size, size2, name, genre, image, id } = Astro.props;
+console.log({ image });
 ---
 
 <div class="card" data-size={size}>
-  <p class="name">Liam Gallagher</p>
-  <p class="genre">Rock</p>
+  <p class="name">{name}</p>
+  <p class="genre">{genre}</p>
+  <!-- <img src=`${image}` alt="" /> -->
+  <img class="bg_img" src={image} alt="" />
 </div>
-
+<!-- <script>
+  {
+    document.querySelector(".card").style.cssText += `background-image: url(${image})`;
+  }
+</script> -->
 <style>
   .card {
     position: relative;
     background-color: #fff;
-    background-image: url(/img/COLOURBOX3764379.jpg);
-    background-size: cover;
-    background-position: center;
+    /* background-image: url({image}); */
+    /* background-image: url(/img/COLOURBOX3764379.jpg); */
+    /* background-size: cover; */
+    /* background-position: center; */
     overflow: hidden;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -21,9 +29,13 @@ const { size } = Astro.props;
   img {
     width: 100%;
     height: auto;
+    position: relative;
+    scale: 175%;
+    top: -10%;
+    transition: 0.3s ease-in;
   }
   p {
-    /* color: var(--white); */
+    color: var(--white);
     font-family: var(--ff-head);
     font-weight: var(--fw-b);
     z-index: 2;
@@ -42,12 +54,17 @@ const { size } = Astro.props;
   }
   .card:hover .name {
     top: 45%;
+    font-size: 110%;
   }
   .card:hover .genre {
     top: 48%;
+    font-size: 110%;
   }
   .card:hover {
     filter: opacity(0.7);
+  }
+  .card:hover img {
+    transform: scale(1.1);
   }
   .card:hover:after {
     content: "";
@@ -67,17 +84,14 @@ const { size } = Astro.props;
   [data-size="large"] {
     width: 22rem;
     font-size: 2.5rem;
-    color: red;
   }
   [data-size="medium"] {
     width: 15rem;
     font-size: 1.8rem;
-    color: green;
   }
   [data-size="small"] {
     width: 8rem;
     font-size: 1rem;
-    color: blue;
   }
 
   @media (max-width: 1100px) {
